@@ -1,0 +1,135 @@
+.nimbus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 40px;
+}
+
+#nimbus .titulo p{
+  text-transform: uppercase;
+}
+
+.nimbus-conteudo > p {
+  margin-bottom: 32px;
+}
+
+.nimbus-imagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column: 1;
+  gap: 20px;
+  align-content: start;
+}
+
+.nimbus-imagens img {
+  border-radius: 4px;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.nimbus-imagens img:nth-child(1) {
+  grid-column: -1/1;
+  align-self: end;
+}
+
+.nimbus-imagens img:nth-child(2) {
+  grid-row: 2;
+}
+
+.nimbus-imagens img:nth-child(3) {
+  grid-row: 2;
+}
+
+.nimbus-comprar {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  justify-items: start;
+  gap: 8px 12px;
+  margin-bottom: 32px;
+}
+
+.nimbus-comprar a {
+  grid-row: span 2;
+}
+
+.nimbus-comprar span {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-12);
+  padding: 4px 8px;
+  border-radius: 4px;
+  gap: 8px;
+}
+
+.nimbus h2 {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.015em;
+}
+
+.nimbus-informacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.nimbus-informacao img {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+.nimbus-informacao h3 {
+  margin-bottom: 8px;
+}
+
+.nimbus-informacao,
+.nimbus-ficha {
+  background-color: var(--cor-12);
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.nimbus-ficha li{
+  display: flex;
+  padding: 4px 0;
+  justify-content: space-between;
+  border-bottom: solid var(--cor-11) 1px;
+}
+
+.nimbus-ficha li:last-child{
+  border-bottom: none;
+}
+
+.nimbus-ficha li span{
+  color: var(--cor-7);
+}
+
+@media(max-width: 800px){
+  .nimbus{
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .nimbus-conteudo{
+    grid-row: 1;
+  }
+}
+
+@media(max-width: 400px){
+  .nimbus-comprar{
+    grid-template-columns: 1fr;
+  }
+  .nimbus-informacao{
+    grid-template-columns: 1fr;
+  }
+  .nimbus-ficha li{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
